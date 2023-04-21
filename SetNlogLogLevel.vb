@@ -9,10 +9,10 @@ Private Shared Sub SetNlogLogLevel(ByVal level As LogLevel)
   ' NLog.Common.InternalLogger.LogLevel = LogLevel.Debug;
 
     If level Is LogLevel.Off Then
-        LogManager.DisableLogging()
+        LogManager.SuspendLogging()
     Else
         If Not LogManager.IsLoggingEnabled() Then
-            LogManager.EnableLogging()
+            LogManager.ResumeLogging()
         End If
 
         For Each rule In LogManager.Configuration.LoggingRules
