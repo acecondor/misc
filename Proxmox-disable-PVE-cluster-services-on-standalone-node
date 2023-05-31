@@ -1,0 +1,2 @@
+systemctl stop pve-ha-lrm pve-ha-crm  
+systemctl disable pve-ha-lrm pve-ha-crm  
