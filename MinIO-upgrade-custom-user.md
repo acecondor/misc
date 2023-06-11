@@ -2,8 +2,8 @@ Aggiornamento MinIO
 
 https://dl.min.io/server/minio/release/linux-amd64/  
 
-systemctl stop minio.service  
 wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_yyyyMMddxxxxxx_amd64.deb -O minio.deb  
+systemctl stop minio.service  
 sudo dpkg -i minio.deb  
 *** modifica manuale  
 nano /lib/systemd/system/minio.service <-- correggere utente e gruppo  
